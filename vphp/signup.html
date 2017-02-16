@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+    <title>Fjellseterlopet</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+
+    <link href='http://fonts.googleapis.com/css?family=Exo+2:400,300&subset=latin,latin-ext' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="style/bootstrap.min.css">
+    <link type="text/css" rel="stylesheet" href="style/style.css">
+        <link rel="image_src"
+      type="image/jpeg"
+      href="path/icon-facebook.gif" />
+
+    <div id="fb-root"></div>
+    <script>(function(d, s, id) {
+      var js, fjs = d.getElementsByTagName(s)[0];
+      if (d.getElementById(id)) return;
+      js = d.createElement(s); js.id = id;
+      js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.0";
+      fjs.parentNode.insertBefore(js, fjs);
+    }(document, 'script', 'facebook-jssdk'));</script>
+
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/custom.js"></script>
+
+</head>
+<body>
+<header>
+
+</header>
+
+
+    <div id="signup" class="container-fluid page pageGreen">
+
+        <div class="col-md-5 col-md-offset-1">
+        </div>
+        <div class="col-md-5 ">
+          <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
+          <input type="hidden" name="cmd" value="_s-xclick">
+          <input type="hidden" name="hosted_button_id" value="GU4TBT7ZGHEE4">
+
+          <table>
+            <tr><td><input type="hidden" name="on0" value="Er du student?" ><span style="color:white">Er du student/ungdom?</span></td></tr>
+            <tr><td><select id="item" onChange="updateInfo()" name="os0">
+              <option selected="selected" value="Ikke student">Ikke student 250,00 NOK</option>
+              <option value="Student">Student/ungdom 200,00 NOK</option>
+            </select> </td></tr>
+            <tr><td><input type="hidden" name="on2" value="Kjønn"><span style="color:white">Kjønn</span></td></tr>
+            <tr><td>
+              <select id="kjonn" name="os2" onchange="updateInfo()">
+                <option selected="selected" value="Mann" >Mann </option>
+                <option value="Kvinne">Kvinne </option>
+              </select>
+            </td></tr>
+
+
+            <tr><td><input type="hidden" name="on1" value="info"></td></tr>
+            <tr><td><input id="infoField" type="text" name="os1" maxlength="200" required></td></tr>
+
+
+            <tr><td><input type="hidden"  value="fornavn"><span style="color:white">Fornavn</span></td></tr>
+            <tr><td><input id="fornavn" type="text"  maxlength="200" pattern="[a-zA-Z]+" required onkeyup="updateInfo()"></td></tr>
+
+            <tr><td><input type="hidden"  value="etternavn"><span style="color:white">Etternavn</span></td></tr>
+            <tr><td><input id="etternavn" type="text" maxlength="200" pattern="[a-zA-Z]+" required onkeyup="updateInfo()"></td></tr>
+
+            <tr><td><input type="hidden"  value="klubb"><span style="color:white">Klubb</span></td></tr>
+            <tr><td><input id="klubb" type="text"  maxlength="200" pattern="[a-zA-Z]+" onkeyup="updateInfo()"></td></tr>
+
+            <tr><td><input type="hidden" value="fodselsdato"><span style="color:white">Fødselsdato</span></td></tr>
+            <tr><td><input id="fodselsdato" type="text"  maxlength="200" placeholder="dd.mm.åååå" pattern="\d{1,2}.\d{1,2}.\d{4}" onkeyup="updateInfo()" required></td></tr>
+
+
+          </table>
+
+
+
+          <input type="hidden" name="currency_code" value="NOK">
+          <input style="margin-top:1em" type="image" src="https://www.paypalobjects.com/no_NO/NO/i/btn/btn_paynowCC_LG.gif" border="0" name="submit" alt="PayPal – den trygge og enkle metoden for å betale på nettet.">
+          <img alt="" border="0" src="https://www.paypalobjects.com/no_NO/i/scr/pixel.gif" width="1" height="1">
+          </form>
+            <p class="small_p">*Du er student/ungdom dersom du studerer på høgskole/universitet/videregående eller er under 18 år.</p>
+        </div>
+        <script>
+          var fornavn = document.getElementById('fornavn'),
+          etternavn = document.getElementById('etternavn'),
+          klubb = document.getElementById('klubb'),
+          fodselsdato = document.getElementById('fodselsdato'),
+          kjonn = document.getElementById('kjonn'),
+          type = document.getElementById('type'),
+          infoField = document.getElementById('infoField');
+          function updateInfo() {
+            infoField.value = fornavn.value + "," + etternavn.value + "," + klubb.value + "," + fodselsdato.value + "," + kjonn.value + "," + item.value;
+          }
+        </script>
+    </div>
+
+
+
+
+
+<footer class="container-fluid"><p class="col-md-2">NTNUI friidrett &copy;</p><p class="col-md-2 col-md-offset-8">Kontakt: kontakt@fjellseterlopet.no</p></footer>
+</div>
+<img alt="" src="res/background.png" id="background">
+
+</body>
+</html>

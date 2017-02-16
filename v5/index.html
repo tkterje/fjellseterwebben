@@ -1,0 +1,194 @@
+<!DOCTYPE HTML>
+
+<html>
+<head>
+<!--[if IE]>
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<![endif]-->
+<meta charset="utf-8">
+    <title>Fjellseterlopet</title>
+    
+
+
+<!-- for image gallery: -->
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="http://netdna.bootstrapcdn.com/bootstrap/3.0.2/css/bootstrap.min.css">
+<link rel="stylesheet" href="http://blueimp.github.io/Gallery/css/blueimp-gallery.min.css">
+<link rel="stylesheet" href="css/bootstrap-image-gallery.css">
+<link rel="stylesheet" href="css/demo.css">
+
+    
+<!-- custom style -->
+<link type="text/css" rel="stylesheet" href="style/style.css">
+<link href='http://fonts.googleapis.com/css?family=Exo+2:400,300&subset=latin,latin-ext' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="style/bootstrap.min.css">
+    
+    <link type="text/css" rel="stylesheet" href="style/bootstrap-image-gallery.min.css">
+    
+    <div id="fb-root"></div>
+    <script>(function(d, s, id) {
+      var js, fjs = d.getElementsByTagName(s)[0];
+      if (d.getElementById(id)) return;
+      js = d.createElement(s); js.id = id;
+      js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.0";
+      fjs.parentNode.insertBefore(js, fjs);
+    }(document, 'script', 'facebook-jssdk'));</script>
+    
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/custom.js"></script>
+    
+</head>
+<body>
+<header>
+
+                 
+        <div id="menu">
+            <div class="ntnuiLogo"><a href="http://www.ntnuifriidrett.org"><img src="res/ntnuiLogo.png" width="auto" height="30px" alt="NTNUI friidrett"></a></div>
+            <!--<a href="#signup">Påmelding</a>-->
+            <a href="#track">Løpet</a>
+            <a href="#practical">Praktisk</a>
+            <a href="#results">Resultater</a>
+            <a href="#history">Historie</a>            
+        </div>
+        <div class="fb-like no-mobile" data-href="https://www.facebook.com/fjellseterlopet" data-width="140" data-layout="standard" data-action="like" data-show-faces="false" data-share="true"></div>
+    
+</header>
+    
+    
+<div class="wrapper">
+    <!-- TOP -->
+    <div class="language-select">
+
+        <div class="dropdown dropdown-language no-mobile">
+          <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-expanded="true">
+            Language
+            <span class="caret"></span>
+          </button>
+          <ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu1">
+            <li role="presentation"><a role="menuitem" tabindex="-1" href="index.html">Norsk</a></li>
+            <li role="presentation"><a role="menuitem" tabindex="-1" href="en.html">English</a></li>
+          </ul>
+        </div>
+</div> 
+
+    <div class="container" id="pageTop">
+
+        <div class="container" id="logoContainer"><a href="index.html"><img id="logo" alt="Fjellseterlopet" src="res/logoColor2.png" width="100%" height="auto"></a></div>
+        
+        
+        
+        
+        
+        
+        
+        <div class="col-md-2 col-md-offset-2 buttonContainer"><a href="#practical"><button type="button" class="btn btn-success">Praktisk info</button></a>
+        <p></p></div>
+        <div class="col-md-6 col-md-offset-1">
+            <h2>Vel gjennomført!</h2>
+            <p>Vi vil gratulere alle deltakerne med et vel gjennomført løp. Været var ikke helt på vår side, men det skremte ikke de 450 personene som møtte opp!</p>
+        </div>
+
+    </div>
+    <div class="container">
+            <div class="fb-like-mobile-container">
+            <div class="fb-like" id="fb-like-mobile" data-href="https://www.facebook.com/fjellseterlopet" data-width="200" data-layout="standard" data-action="like" data-show-faces="false" data-share="true"></div>
+            <div class="if-mobile"><a href="en.html" class="language-select-mobile">English</a></div>
+            </div>
+            
+    </div>
+<!-- ---------------- -->
+    
+    
+    
+    
+    
+    
+<div class="container">
+    <h1>Bootstrap Image Gallery Demo</h1>
+    <blockquote>
+        <p>bilder .. </p>
+    </blockquote>
+    <form class="form-inline">
+        <div class="form-group">
+            <button id="video-gallery-button" type="button" class="btn btn-success btn-lg">
+                <i class="glyphicon glyphicon-film"></i>
+                Launch Video Gallery
+            </button>
+        </div>
+        <div class="form-group">
+            <button id="image-gallery-button" type="button" class="btn btn-primary btn-lg">
+                <i class="glyphicon glyphicon-picture"></i>
+                Launch Image Gallery
+            </button>
+        </div>
+        <div class="btn-group" data-toggle="buttons">
+          <label class="btn btn-success btn-lg">
+            <i class="glyphicon glyphicon-leaf"></i>
+            <input id="borderless-checkbox" type="checkbox"> Borderless
+          </label>
+          <label class="btn btn-primary btn-lg">
+            <i class="glyphicon glyphicon-fullscreen"></i>
+            <input id="fullscreen-checkbox" type="checkbox"> Fullscreen
+          </label>
+        </div>
+    </form>
+    <br>
+    <!-- The container for the list of example images -->
+    <div id="links"></div>
+    <br>
+</div>
+<!-- The Bootstrap Image Gallery lightbox, should be a child element of the document body -->
+<div id="blueimp-gallery" class="blueimp-gallery">
+    <!-- The container for the modal slides -->
+    <div class="slides"></div>
+    <!-- Controls for the borderless lightbox -->
+    <h3 class="title"></h3>
+    <a class="prev">‹</a>
+    <a class="next">›</a>
+    <a class="close">×</a>
+    <a class="play-pause"></a>
+    <ol class="indicator"></ol>
+    <!-- The modal dialog, which will be used to wrap the lightbox content -->
+    <div class="modal fade">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" aria-hidden="true">&times;</button>
+                    <h4 class="modal-title"></h4>
+                </div>
+                <div class="modal-body next"></div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default pull-left prev">
+                        <i class="glyphicon glyphicon-chevron-left"></i>
+                        Previous
+                    </button>
+                    <button type="button" class="btn btn-primary next">
+                        Next
+                        <i class="glyphicon glyphicon-chevron-right"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+    
+
+
+<!-- for gallery -->
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+
+    <script src="http://netdna.bootstrapcdn.com/bootstrap/3.0.2/js/bootstrap.min.js"></script>
+    <script src="http://blueimp.github.io/Gallery/js/jquery.blueimp-gallery.min.js"></script>
+    <script src="js/bootstrap-image-gallery.js"></script>
+    <script src="js/demo.js"></script>
+    
+    
+<footer class="container-fluid"><p class="col-md-2">NTNUI friidrett &copy;</p><p class="col-md-2 col-md-offset-8">Kontakt: kontakt@fjellseterlopet.no</p></footer>
+</div>
+    
+<img alt="" src="res/background.png" id="background">
+</body> 
+</html>
