@@ -252,13 +252,19 @@ body{
 
 }
 .sponsor-box{
-    max-width: 30%;
-
+    max-width: 100%;
     margin-left: 3%;
     float:left;
 }
 .sponsor-box a img{
-  max-height: 3em;
+  max-height: 20em;
+}
+
+.sponsor-img {
+  max-width: 100%;
+  height: auto;
+  object-fit: cover;
+  padding: 2em;
 }
 
 /* payment */
