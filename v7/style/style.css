@@ -249,13 +249,17 @@ body{
 }
 /* sponsor */
 .sponsor-container{
-
+  float:left;
 }
 .sponsor-box{
     max-width: 100%;
     margin-left: 3%;
     float:left;
 }
+#sponstext {
+ float:right;
+}
+
 .sponsor-box a img{
   max-height: 20em;
 }
