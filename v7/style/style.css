@@ -258,7 +258,8 @@ body{
 }
 
 .bidrag-box a img{
-  max-height: 20em;
+#  max-height: 20em;
+
 }
 
 .bidrag-img {
