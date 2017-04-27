@@ -248,19 +248,21 @@ body{
     display:block;
 }
 /* sponsor */
-.sponsor-container{
-
+.bidrag-container{
+  float:left;
 }
-.sponsor-box{
+.bidrag-box{
     max-width: 100%;
     margin-left: 3%;
     float:left;
 }
-.sponsor-box a img{
-  max-height: 20em;
+
+.bidrag-box a img{
+#  max-height: 20em;
+
 }
 
-.sponsor-img {
+.bidrag-img {
   max-width: 100%;
   height: auto;
   object-fit: cover;
